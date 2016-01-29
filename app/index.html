@@ -27,6 +27,8 @@
         <div class="header">
           <ul class="nav nav-pills pull-right">
             <li class="active"><a ng-href="#/elements">Subjects</a></li>
+            <li><a ng-href="#/dictionary">Dictionary</a></li>
+            <li><a ng-href="#/progress">Progress</a></li>
           </ul>
           <h3 class="text-muted">Mathematics</h3>
         </div>
@@ -84,22 +86,18 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!--
-    <script src="scripts/lasng.js"></script>
-  -->
-
+    <script src="bower_components/requirejs/require.js"></script>
+    <script src="scripts/clientside/lasng.js"></script>
+  
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/clientside/app.js"></script>
   <script src="scripts/clientside/controllers/question.js"></script>
   <script src="scripts/clientside/controllers/elements.js"></script>
+  <script src="scripts/clientside/controllers/theory.page.js"></script>
   <script src="scripts/clientside/services/questionContent.js"></script>
   <script src="scripts/clientside/services/elementContent.js"></script>
   <script src="scripts/clientside/filters/elementFilter.js"></script>
   <!-- endbuild -->
-
-    <!--
-    <script data-main="scripts/lasng" src="bower_components/requirejs/require.js"></script>
-  -->
 
 </body>
 </html>

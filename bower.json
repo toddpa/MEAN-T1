@@ -2,30 +2,33 @@
   "name": "math-ng",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "~1.3.0",
+    "angular": "~1.4.0",
     "json3": "~3.3.1",
-    "jquery": "1.10.2",
+    "jquery": "2.1.4",
     "es5-shim": "~3.1.0",
     "bootstrap-sass-official": "~3.2.0",
-    "angular-resource": "~1.3.x",
-    "angular-cookies": "~1.3.x",
-    "angular-sanitize": "~1.3.x",
-    "angular-animate": "~1.3.x",
-    "angular-touch": "~1.3.x",
-    "angular-route": "~1.3.x",
-    "angular-mocks": "~1.3.x",
+    "angular-resource": "~1.4.x",
+    "angular-cookies": "~1.4.x",
+    "angular-sanitize": "~1.4.x",
+    "angular-animate": "~1.4.x",
+    "angular-touch": "~1.4.x",
+    "angular-route": "~1.4.x",
+    "angular-mocks": "~1.4.x",
     "qunit": "~1.15.0",
     "snap.svg": "~0.3.0",
-    "requirejs": "~2.1.15"
+    "requirejs": "~2.1.15",
+    "angular-material": "~1.0.0"
   },
   "devDependencies": {
-    "angular-mocks": "~1.3.x",
-    "angular-scenario": "~1.3.x"
+    "angular-mocks": "~1.4.x",
+    "angular-scenario": "~1.4.x",
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15"
   },
   "appPath": "app",
   "client": "app/scripts/clientside",
   "server": "app/scripts/serverside",
   "resolutions": {
-    "angular": "~1.3.0"
+    "angular": "~1.4.8"
   }
 }

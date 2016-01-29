@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular.module('elementFilter', []).filter('questionName', function() {
-  return function(questionName) {
-    return questionName.slice(questionName.length-3, questionName.length);
+  return function(question) {
+    return question.slice(question.length-3, question.length);
   };
 });

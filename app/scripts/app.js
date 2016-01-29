@@ -27,7 +27,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(path.resolve('./')));
 
 // NEW - alternative using the HTTP server
 app.set('port', process.env.PORT || 3000); 
@@ -40,9 +39,14 @@ var questionRoute = require('./serverside/routes/question.routes')(app, express.
 var elementsRoute = require('./serverside/routes/elements.routes')(app, express.Router());
 var elementRoute = require('./serverside/routes/element.routes')(app, express.Router());
 
+logger.info("./", path.resolve('./'));
+app.use(express.static(path.resolve('./')));
+app.use("/content", express.static(path.resolve('./')));
+// app.use("/content/Fractions", express.static(path.resolve('./content/Fractions')));
+
 // Log Error
 function logErrors(err, req, res, next) {
-  console.error(err.stack);
+  logger.error(err.stack);
   next(err);
 }
 
@@ -66,7 +70,7 @@ function errorHandler(err, req, res, next) {
 }
 
 function errorHandlerLog(req, res, next) {
-  console.log('Cannot find that');
+  logger.info('Cannot find that:' + req.path);
   next();
 }
 
